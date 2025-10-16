@@ -7,7 +7,7 @@ class DashBoardViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AdaptiveLayout(
+    return AdaptiveLayoutWidget(
       mobileLayout: (context) => const SizedBox(),
       tabletLayout: (context) => const SizedBox(),
       desktopLayout: (context) => const DashBoardDesktopLayout(),
