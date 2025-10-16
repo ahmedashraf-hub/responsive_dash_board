@@ -1,39 +1,48 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/models/drawer_item_model.dart';
 import 'package:responsive_dash_board/utils/app_iamges.dart';
-import 'package:responsive_dash_board/widgets/drawer_item.dart';
+import 'package:responsive_dash_board/widgets/active_and_inactive_item.dart';
+import 'package:responsive_dash_board/widgets/drawer_items_list_view.dart';
 import 'package:responsive_dash_board/widgets/user_info_list_tile.dart';
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({super.key});
 
-  static const List<DrawerItemModel> items = [
-    DrawerItemModel(image: Assets.imagesDashboard, title: 'Dashboard'),
-    DrawerItemModel(image: Assets.imagesMyTransctions, title: 'My Transaction'),
-    DrawerItemModel(image: Assets.imagesStatistics, title: 'Statistics'),
-    DrawerItemModel(image: Assets.imagesWalletAccount, title: 'Wallet Account'),
-    DrawerItemModel(image: Assets.imagesMyInvestments, title: 'My Investments'),
-  ];
-
   @override
   Widget build(BuildContext context) {
     return Container(
       color: Colors.white,
-      child: Column(
-        children: [
-          const UserInfoListTile(
-            iamgePath: Assets.imagesAvatar3,
-            title: 'Lekan Okeowo',
-            subTitle: 'demo@gmail.com',
+      child: CustomScrollView(
+        slivers: [
+          SliverToBoxAdapter(
+            child: const UserInfoListTile(
+              iamgePath: Assets.imagesAvatar3,
+              title: 'Lekan Okeowo',
+              subTitle: 'demo@gmail.com',
+            ),
           ),
-          const SizedBox(height: 8),
-          ListView.builder(
-            shrinkWrap: true,
-            physics: NeverScrollableScrollPhysics(),
-            itemCount: items.length,
-            itemBuilder: (context, index) {
-              return DrawerItem(drawerItemModel: items[index]);
-            },
+          SliverToBoxAdapter(child: const SizedBox(height: 8)),
+          const DrawerItemsListView(),
+          SliverFillRemaining(
+            hasScrollBody: false,
+            child: Column(
+              children: [
+                Expanded(child: SizedBox(height: 20)),
+                InActiveDrawerItem(
+                  drawerItemModel: DrawerItemModel(
+                    image: Assets.imagesSettings,
+                    title: 'Setting system',
+                  ),
+                ),
+                InActiveDrawerItem(
+                  drawerItemModel: DrawerItemModel(
+                    image: Assets.imagesLogout,
+                    title: 'Logout account',
+                  ),
+                ),
+                const SizedBox(height: 48),
+              ],
+            ),
           ),
         ],
       ),
