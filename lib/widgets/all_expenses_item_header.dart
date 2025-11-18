@@ -2,9 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:svg_flutter/svg.dart';
 
 class AllExpensesItemHeader extends StatelessWidget {
-  const AllExpensesItemHeader({super.key, required this.image});
+  const AllExpensesItemHeader({
+    super.key,
+    required this.image,
+    this.imageColor,
+    this.imageBackColor,
+  });
 
   final String image;
+  final Color? imageColor, imageBackColor;
 
   @override
   Widget build(BuildContext context) {
@@ -15,14 +21,26 @@ class AllExpensesItemHeader extends StatelessWidget {
           height: 60,
           width: 60,
           decoration: BoxDecoration(
-            color: const Color(0XFFFAFAFA),
+            color: imageBackColor ?? Color(0XFFFAFAFA),
             borderRadius: BorderRadius.circular(30),
           ),
-          child: Center(child: SvgPicture.asset(image)),
+          child: Center(
+            child: SvgPicture.asset(
+              image,
+              colorFilter: ColorFilter.mode(
+                imageColor ?? Color(0xff4eb7f2),
+                BlendMode.srcIn,
+              ),
+            ),
+          ),
         ),
         IconButton(
           onPressed: () {},
-          icon: const Icon(Icons.keyboard_arrow_right, size: 24),
+          icon: Icon(
+            Icons.keyboard_arrow_right,
+            size: 24,
+            color: imageColor == null ? Color(0XFF046061) : Colors.white,
+          ),
         ),
       ],
     );

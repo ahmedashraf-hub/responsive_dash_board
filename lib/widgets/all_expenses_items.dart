@@ -3,7 +3,7 @@ import 'package:responsive_dash_board/models/all_expenses_item_model.dart';
 import 'package:responsive_dash_board/utils/app_iamges.dart';
 import 'package:responsive_dash_board/widgets/all_expenses_item.dart';
 
-class AllExpensesItems extends StatelessWidget {
+class AllExpensesItems extends StatefulWidget {
   const AllExpensesItems({super.key});
 
   static const List<AllExpensesItemModel> items = [
@@ -28,22 +28,53 @@ class AllExpensesItems extends StatelessWidget {
   ];
 
   @override
+  State<AllExpensesItems> createState() => _AllExpensesItemsState();
+}
+
+class _AllExpensesItemsState extends State<AllExpensesItems> {
+  int selectedIndex = 0;
+
+  @override
   Widget build(BuildContext context) {
     return Row(
-      children: items.asMap().entries.map((e) {
+      children: AllExpensesItems.items.asMap().entries.map((e) {
         int index = e.key;
         var item = e.value;
         if (index == 1) {
           return Expanded(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 12.0),
-              child: AllExpensesItem(allExpensesItemModel: item),
+            child: GestureDetector(
+              onTap: () {
+                updateIndex(index);
+              },
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                child: AllExpensesItem(
+                  allExpensesItemModel: item,
+                  isSelected: selectedIndex == index,
+                ),
+              ),
             ),
           );
         } else {
-          return Expanded(child: AllExpensesItem(allExpensesItemModel: item));
+          return Expanded(
+            child: GestureDetector(
+              onTap: () {
+                updateIndex(index);
+              },
+              child: AllExpensesItem(
+                allExpensesItemModel: item,
+                isSelected: selectedIndex == index,
+              ),
+            ),
+          );
         }
       }).toList(),
     );
+  }
+
+  void updateIndex(int index) {
+    setState(() {
+      selectedIndex = index;
+    });
   }
 }
