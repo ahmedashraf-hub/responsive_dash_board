@@ -15,7 +15,7 @@ class AllExpensesItemHeader extends StatelessWidget {
           height: 60,
           width: 60,
           decoration: BoxDecoration(
-            color: Color(0XFFFAFAFA),
+            color: const Color(0XFFFAFAFA),
             borderRadius: BorderRadius.circular(30),
           ),
           child: Center(child: SvgPicture.asset(image)),

@@ -12,7 +12,7 @@ class AllExpensesItem extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
       decoration: BoxDecoration(
-        color: Color(0XFFFFFFFF),
+        color: const Color(0XFFFFFFFF),
         borderRadius: BorderRadius.circular(12),
         border: Border.all(width: 1, color: Color(0XFFF1F1F1)),
       ),
