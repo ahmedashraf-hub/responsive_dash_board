@@ -28,7 +28,7 @@ class ActiveDrawerItem extends StatelessWidget {
       leading: SvgPicture.asset(drawerItemModel.image),
       title: Text(drawerItemModel.title, style: AppStyles.styleBold16),
       trailing: Container(
-        width: 3.7,
+        width: 3.27,
         decoration: BoxDecoration(color: Color(0XFF4EB7F2)),
       ),
     );

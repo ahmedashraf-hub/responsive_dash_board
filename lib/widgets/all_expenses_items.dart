@@ -6,6 +6,11 @@ import 'package:responsive_dash_board/widgets/all_expenses_item.dart';
 class AllExpensesItems extends StatefulWidget {
   const AllExpensesItems({super.key});
 
+  @override
+  State<AllExpensesItems> createState() => _AllExpensesItemsState();
+}
+
+class _AllExpensesItemsState extends State<AllExpensesItems> {
   static const List<AllExpensesItemModel> items = [
     AllExpensesItemModel(
       image: Assets.imagesBalance,
@@ -27,17 +32,12 @@ class AllExpensesItems extends StatefulWidget {
     ),
   ];
 
-  @override
-  State<AllExpensesItems> createState() => _AllExpensesItemsState();
-}
-
-class _AllExpensesItemsState extends State<AllExpensesItems> {
   int selectedIndex = 0;
 
   @override
   Widget build(BuildContext context) {
     return Row(
-      children: AllExpensesItems.items.asMap().entries.map((e) {
+      children: items.asMap().entries.map((e) {
         int index = e.key;
         var item = e.value;
         if (index == 1) {
