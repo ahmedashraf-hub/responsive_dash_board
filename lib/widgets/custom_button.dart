@@ -13,7 +13,7 @@ class CustomButton extends StatelessWidget {
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
           elevation: 0,
-          backgroundColor: backgroundColor ?? Color(0XFFF4D7F2),
+          backgroundColor: backgroundColor ?? Color(0XFF4DB7F2),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(12),
           ),
@@ -21,7 +21,7 @@ class CustomButton extends StatelessWidget {
         onPressed: () {},
         child: Text(
           'Send Money',
-          style: AppStyles.styleSemiBold16.copyWith(color: textColor),
+          style: AppStyles.styleSemiBold18.copyWith(color: textColor),
         ),
       ),
     );
