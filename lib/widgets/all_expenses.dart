@@ -11,11 +11,11 @@ class AllExpenses extends StatelessWidget {
     return const CustomBackgroundContainer(
       pading: null,
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
           AllExpensesHeader(),
           SizedBox(height: 16),
-          Expanded(child: AllExpensesItems()),
+          AllExpensesItems(),
         ],
       ),
     );

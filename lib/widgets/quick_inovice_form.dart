@@ -48,7 +48,6 @@ class QuickInoviceForm extends StatelessWidget {
               ),
             ),
             const SizedBox(width: 24),
-
             Expanded(child: CustomButton()),
           ],
         ),
