@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dash_board/utils/app_iamges.dart';
 
 class MyCard extends StatelessWidget {
   const MyCard({super.key});
@@ -7,7 +8,17 @@ class MyCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return AspectRatio(
       aspectRatio: 420 / 215,
-      child: Container(decoration: BoxDecoration(color: Colors.amber)),
+      child: Container(
+        decoration: ShapeDecoration(
+          image: const DecorationImage(
+            image: AssetImage(Assets.imagesCardBackground),
+          ),
+          color: const Color(0XFF4E87f2),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12),
+          ),
+        ),
+      ),
     );
   }
 }
