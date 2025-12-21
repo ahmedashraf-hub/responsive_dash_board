@@ -44,7 +44,7 @@ class _MyCardsPageViewState extends State<MyCardsPageView> {
             dotWidth: 8,
             activeDotColor: Color(0xFF4EB7F2),
             dotColor: Color(0XFFE8E8E8),
-            expansionFactor: 3,
+            expansionFactor: 4,
           ),
           onDotClicked: (index) {
             controller.animateToPage(
