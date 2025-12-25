@@ -30,7 +30,6 @@ class MyCard extends StatelessWidget {
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.end,
-              mainAxisSize: MainAxisSize.min, // Changed from max to min
               children: [
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -67,27 +66,29 @@ class MyCard extends StatelessWidget {
                   ],
                 ),
                 const Spacer(),
-                FittedBox(
-                  fit: BoxFit.scaleDown,
-                  alignment: Alignment.centerRight,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.end,
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Text(
-                        '0918 8124 0042 8129',
-                        style: AppStyles.styleSemiBold24.copyWith(
-                          color: Colors.white,
+                Flexible(
+                  child: FittedBox(
+                    fit: BoxFit.scaleDown,
+                    alignment: Alignment.centerRight,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Text(
+                          '0918 8124 0042 8129',
+                          style: AppStyles.styleSemiBold24.copyWith(
+                            color: Colors.white,
+                          ),
                         ),
-                      ),
-                      const SizedBox(height: 4),
-                      Text(
-                        '12/20 - 124',
-                        style: AppStyles.styleRegular16.copyWith(
-                          color: Colors.white,
+                        const SizedBox(height: 4),
+                        Text(
+                          '12/20 - 124',
+                          style: AppStyles.styleRegular16.copyWith(
+                            color: Colors.white,
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
               ],
