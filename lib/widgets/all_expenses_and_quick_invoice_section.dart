@@ -10,7 +10,7 @@ class AllExpensesAndQuickInvoiceSection extends StatelessWidget {
     return Column(
       children: [
         AllExpenses(),
-        SizedBox(width: 24),
+        SizedBox(height: 24),
         QuickInvoice(),
         SizedBox(height: 40),
       ],

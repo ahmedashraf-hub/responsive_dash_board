@@ -1,19 +1,19 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
-class IncomeCahrt extends StatefulWidget {
-  const IncomeCahrt({super.key});
+class IncomeChart extends StatefulWidget {
+  const IncomeChart({super.key});
 
   @override
-  State<IncomeCahrt> createState() => _IncomeCahrtState();
+  State<IncomeChart> createState() => _IncomeChartState();
 }
 
-class _IncomeCahrtState extends State<IncomeCahrt> {
+class _IncomeChartState extends State<IncomeChart> {
   int activeIndex = -1;
 
   @override
   Widget build(BuildContext context) {
-    return AspectRatio(aspectRatio: 1, child: PieChart(getChartData()));
+    return PieChart(getChartData());
   }
 
   PieChartData getChartData() {

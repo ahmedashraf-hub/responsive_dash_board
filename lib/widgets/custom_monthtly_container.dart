@@ -15,7 +15,7 @@ class CustomMonthtlyContainer extends StatelessWidget {
       ),
       child: Row(
         children: [
-          const Text('Monthly', style: AppStyles.styleMedium16),
+          Text('Monthly', style: AppStyles.styleMedium16),
           const SizedBox(width: 18),
           IconButton(
             onPressed: () {},

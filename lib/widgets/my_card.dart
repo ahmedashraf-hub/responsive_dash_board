@@ -13,6 +13,7 @@ class MyCard extends StatelessWidget {
       child: Container(
         decoration: ShapeDecoration(
           image: const DecorationImage(
+            fit: BoxFit.cover,
             image: AssetImage(Assets.imagesCardBackground),
           ),
           color: const Color(0XFF4E87f2),
@@ -20,45 +21,78 @@ class MyCard extends StatelessWidget {
             borderRadius: BorderRadius.circular(12),
           ),
         ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.end,
-          children: [
-            ListTile(
-              contentPadding: const EdgeInsets.only(
-                right: 42.0,
-                left: 31.0,
-                top: 16.0,
-              ),
-              title: Text(
-                'Name card',
-                style: AppStyles.styleRegular16.copyWith(color: Colors.white),
-              ),
-              subtitle: Text('Syah Bandi', style: AppStyles.styleMedium20),
-              trailing: SvgPicture.asset(Assets.imagesGallery),
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(12),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(
+              horizontal: 24.0,
+              vertical: 16.0,
             ),
-            const Expanded(child: SizedBox()),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 12.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: [
-                  Text(
-                    '0918 8124 0042 8129',
-                    style: AppStyles.styleSemiBold24.copyWith(
-                      color: Colors.white,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              mainAxisSize: MainAxisSize.min, // Changed from max to min
+              children: [
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Text(
+                            'Name card',
+                            style: AppStyles.styleRegular16.copyWith(
+                              color: Colors.white,
+                            ),
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                          const SizedBox(height: 4),
+                          Text(
+                            'Syah Bandi',
+                            style: AppStyles.styleMedium20,
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                        ],
+                      ),
                     ),
-                  ),
-                  Text(
-                    '12/20 - 124',
-                    style: AppStyles.styleRegular16.copyWith(
-                      color: Colors.white,
+                    const SizedBox(width: 8),
+                    SvgPicture.asset(
+                      Assets.imagesGallery,
+                      height: 24,
+                      width: 24,
                     ),
+                  ],
+                ),
+                const Spacer(),
+                FittedBox(
+                  fit: BoxFit.scaleDown,
+                  alignment: Alignment.centerRight,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text(
+                        '0918 8124 0042 8129',
+                        style: AppStyles.styleSemiBold24.copyWith(
+                          color: Colors.white,
+                        ),
+                      ),
+                      const SizedBox(height: 4),
+                      Text(
+                        '12/20 - 124',
+                        style: AppStyles.styleRegular16.copyWith(
+                          color: Colors.white,
+                        ),
+                      ),
+                    ],
                   ),
-                  const SizedBox(height: 24),
-                ],
-              ),
+                ),
+              ],
             ),
-          ],
+          ),
         ),
       ),
     );
