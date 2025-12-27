@@ -26,19 +26,30 @@ class ActiveAllExpensesItem extends StatelessWidget {
             imageBackColor: Colors.white.withValues(alpha: 0.10000000149011612),
           ),
           SizedBox(height: 34),
-          Text(
-            allExpensesItemModel.title,
-            style: AppStyles.styleMedium16.copyWith(color: Colors.white),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              allExpensesItemModel.title,
+              style: AppStyles.styleMedium16.copyWith(color: Colors.white),
+            ),
           ),
           const SizedBox(height: 8),
-          Text(
-            allExpensesItemModel.date,
-            style: AppStyles.styleRegular14.copyWith(color: Color(0XFFFAFAFA)),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              allExpensesItemModel.date,
+              style: AppStyles.styleRegular14.copyWith(
+                color: Color(0XFFFAFAFA),
+              ),
+            ),
           ),
           const SizedBox(height: 16),
-          Text(
-            allExpensesItemModel.price,
-            style: AppStyles.styleSemiBold24.copyWith(color: Colors.white),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              allExpensesItemModel.price,
+              style: AppStyles.styleSemiBold24.copyWith(color: Colors.white),
+            ),
           ),
         ],
       ),
@@ -68,11 +79,29 @@ class InActiveAllExpensesItem extends StatelessWidget {
         children: [
           AllExpensesItemHeader(image: allExpensesItemModel.image),
           SizedBox(height: 34),
-          Text(allExpensesItemModel.title, style: AppStyles.styleMedium16),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              allExpensesItemModel.title,
+              style: AppStyles.styleMedium16,
+            ),
+          ),
           const SizedBox(height: 8),
-          Text(allExpensesItemModel.date, style: AppStyles.styleRegular14),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              allExpensesItemModel.date,
+              style: AppStyles.styleRegular14,
+            ),
+          ),
           const SizedBox(height: 16),
-          Text(allExpensesItemModel.price, style: AppStyles.styleSemiBold24),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              allExpensesItemModel.price,
+              style: AppStyles.styleSemiBold24,
+            ),
+          ),
         ],
       ),
     );

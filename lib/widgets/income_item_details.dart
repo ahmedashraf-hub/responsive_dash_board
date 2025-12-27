@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dash_board/models/inocme_item_details_model.dart';
+import 'package:responsive_dash_board/models/income_item_details_model.dart';
 import 'package:responsive_dash_board/utils/app_styles.dart';
 
-class InocmeItemDetails extends StatelessWidget {
-  const InocmeItemDetails({super.key, required this.inocmeItemDetailsModel});
+class IncomeItemDetails extends StatelessWidget {
+  const IncomeItemDetails({super.key, required this.inocmeItemDetailsModel});
 
-  final InocmeItemDetailsModel inocmeItemDetailsModel;
+  final IncomeItemDetailsModel inocmeItemDetailsModel;
   @override
   Widget build(BuildContext context) {
     return ListTile(

@@ -20,7 +20,7 @@ class IncomeSection extends StatelessWidget {
           if (width >= SizeConfig.desktop && width < 1750)
             Expanded(child: DetailedInocmeChart())
           else
-            AspectRatio(aspectRatio: 1, child: IncomeSectionBody()),
+            IncomeSectionBody(),
         ],
       ),
     );
