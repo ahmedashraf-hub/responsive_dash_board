@@ -16,29 +16,34 @@ A responsive Flutter dashboard application that adapts to different screen sizes
 ## Screenshots
 
 <div align="center">
-  <img src="assets/screenshots/Screenshot_1.png" alt="Dashboard Mobile View" width="30%">
-  <img src="assets/screenshots/Screenshot_2.png" alt="Dashboard Tablet View" width="45%">
-  <img src="assets/screenshots/Screenshot_3.png" alt="Dashboard Desktop View" width="70%">
+  <h3>Mobile, Tablet & Desktop Views</h3>
+  <img src="assets/screenshots/Screenshot_1.png" alt="Dashboard Mobile View" width="200" style="margin: 10px;">
+  <img src="assets/screenshots/Screenshot_2.png" alt="Dashboard Tablet View" width="300" style="margin: 10px;">
+  <img src="assets/screenshots/Screenshot_3.png" alt="Dashboard Desktop View" width="400" style="margin: 10px;">
 </div>
 
 <div align="center">
-  <img src="assets/screenshots/Screenshot_4.png" alt="Income Section" width="30%">
-  <img src="assets/screenshots/Screenshot_5.png" alt="Expense Tracking" width="30%">
-  <img src="assets/screenshots/Screenshot_6.png" alt="Transaction History" width="30%">
+  <h3>Financial Tracking Features</h3>
+  <img src="assets/screenshots/Screenshot_4.png" alt="Income Section" width="250" style="margin: 10px;">
+  <img src="assets/screenshots/Screenshot_5.png" alt="Expense Tracking" width="250" style="margin: 10px;">
+  <img src="assets/screenshots/Screenshot_6.png" alt="Transaction History" width="250" style="margin: 10px;">
 </div>
 
 <div align="center">
-  <img src="assets/screenshots/Screenshot_7.png" alt="Quick Invoice Form" width="45%">
-  <img src="assets/screenshots/Screenshot_8.png" alt="Card Management" width="45%">
+  <h3>Additional Features</h3>
+  <img src="assets/screenshots/Screenshot_7.png" alt="Quick Invoice Form" width="350" style="margin: 10px;">
+  <img src="assets/screenshots/Screenshot_8.png" alt="Card Management" width="350" style="margin: 10px;">
 </div>
 
 <div align="center">
-  <img src="assets/screenshots/Screenshot_9.png" alt="Detailed Dashboard View" width="45%">
-  <img src="assets/screenshots/Screenshot_10.png" alt="Another Dashboard View" width="45%">
+  <h3>Dashboard Details</h3>
+  <img src="assets/screenshots/Screenshot_9.png" alt="Detailed Dashboard View" width="350" style="margin: 10px;">
+  <img src="assets/screenshots/Screenshot_10.png" alt="Another Dashboard View" width="350" style="margin: 10px;">
 </div>
 
 <div align="center">
-  <img src="assets/screenshots/Screenshot_11.png" alt="Final Dashboard View" width="70%">
+  <h3>Complete Dashboard View</h3>
+  <img src="assets/screenshots/Screenshot_11.png" alt="Final Dashboard View" width="700" style="margin: 10px;">
 </div>
 
 ## Technologies Used
